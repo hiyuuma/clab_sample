@@ -6,7 +6,8 @@
 
 ## 内容
 - `github.ipynb`: ColabとGitHubの連携についての説明と、CIFAR-10データセットを使ったCNNのサンプルコード
-- `hello_ml.py`: シンプルな線形回帰のデモスクリプト
+- `hello_ml.py`: シンプルな線形回帰のデモスクリプト（可視化オプション付き）
+- `test_hello_ml.py`: hello_ml.pyのユニットテスト
 
 ## 必要なライブラリ
 - numpy
@@ -19,8 +20,14 @@
 
 ```bash
 # 必要なライブラリをインストール
-pip install numpy
+pip install numpy matplotlib
 
-# スクリプトを実行
+# スクリプトを実行（標準モード）
 python hello_ml.py
+
+# スクリプトを実行（可視化モード）
+python hello_ml.py --visualize
+
+# ユニットテストを実行
+python -m unittest test_hello_ml.py
 ```
